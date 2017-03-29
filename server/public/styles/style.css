@@ -1,3 +1,35 @@
-.fluid-container {
+/*
+morning sky : #CAE4DB
+honey : #DCAE1D
+cerulean : #00303F
+mist : #7A9D96
+*/
+
+.container-fluid {
   min-height: 100px;
+  text-align: center;
+}
+
+.header {
+  background-color: #00303F;
+  padding: 1px;
+  text-align: center;
+  color: #CAE4DB;
+}
+
+.wrapper {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.generateDiv {
+  background-color: #DCAE1D;
+}
+
+#currentGroupDiv {
+  background-color: #7A9D96;
+}
+
+#previousGroupDiv {
+  background-color: #CAE4DB;
 }
