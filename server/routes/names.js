@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-var express = require('express');
-var router = express.Router();
-=======
 var express = require("express");
 var router = express.Router();
 var mongoose = require("mongoose");
@@ -22,6 +18,5 @@ router.get("/", function(req,res){
     res.send(allNames);
   });
 });
->>>>>>> 68d69bff5e486f36f2d627c5930f427639557a06
 
 module.exports = router;
