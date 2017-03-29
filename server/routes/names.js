@@ -26,6 +26,7 @@ router.get("/makeNewGroup", function(req,res){
     res.send(allNames);
   });
 });
+<<<<<<< HEAD
 
 //get groups
 router.get("/makeNewGroup", function(req, res){
@@ -54,5 +55,7 @@ router.post("/post", function(req,res){
     res.send(savedGroups);
   });
 });
+=======
+>>>>>>> 449dc57518289ba7fed132110c692107671f8ea5
 
 module.exports = router;
