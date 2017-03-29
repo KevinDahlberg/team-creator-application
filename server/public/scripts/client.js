@@ -29,6 +29,7 @@ function createGroups(){
       }
       if (curGroup.length === groupSize)
       allGroups.push(curGroup);
+      curGroup = [];
     }
 
 
