@@ -10,7 +10,7 @@ function addEventListeners() {
     generateGroups();
   });
 
-  $('showPastGroupsButton').on('click',function() {
+  $('#showPastGroupsButton').on('click',function() {
     showPastGroups();
   });
 }//end addEventListeners
