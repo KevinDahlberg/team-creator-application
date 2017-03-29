@@ -26,10 +26,11 @@ function generateGroups(groupSize) {
         type: 'POST',
         url: '/names/saveNewGroup',
         success: function(response) {
-          console.log("newGroup saved successfully");
+          console.log("newGroup savedb successfully");
         }
+      });//end POST ajax
     }
-  });
+  });//end GET ajax
 }
 
 function showPastGroups() {
