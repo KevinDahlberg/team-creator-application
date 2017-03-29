@@ -25,7 +25,8 @@ function generateGroups(groupSize) {
       $.ajax({
         type: 'POST',
         url: '/names/saveNewGroup',
-        success: function(response) {
+        data: response,
+        success: function() {
           console.log("newGroup savedb successfully");
         }
       });//end POST ajax
