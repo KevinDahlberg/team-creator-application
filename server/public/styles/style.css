@@ -62,8 +62,8 @@ button {
 
 #prevGroup {
   background-color: #7A9D96;
-  width: 100px;
-  height: 100px;
+  max-width: 200px;
+  min-height: 100px;
   margin: 15px;
   display: inline-block;
 }
