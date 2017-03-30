@@ -35,7 +35,7 @@ router.get("/allGroups", function(req, res){
       console.log(err);
       res.sendStatus(500);
     }
-
+    console.log(allGroups);
     res.send(allGroups);
   });
 });
