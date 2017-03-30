@@ -4,32 +4,66 @@ honey : #DCAE1D
 cerulean : #00303F
 mist : #7A9D96
 */
+html {
+  font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h3 {
+  font-family: 'Raleway', sans-serif;
+}
 
 .container-fluid {
-  min-height: 100px;
   text-align: center;
 }
 
 .header {
+  min-height: 100px;
   background-color: #00303F;
-  padding: 1px;
+  letter-spacing: 3px;
   text-align: center;
   color: #CAE4DB;
-}
-
-.wrapper {
-  width: 75%;
-  margin: 0 auto;
+  font-family: 'Open Sans Condensed', sans-serif;
 }
 
 .generateDiv {
-  background-color: #DCAE1D;
+  background-color: #CAE4DB;
+}
+
+.centered {
+  margin: 0 auto;
+  float: none;
 }
 
 #currentGroupDiv {
   background-color: #7A9D96;
+  min-height: 300px;
 }
 
 #previousGroupDiv {
   background-color: #CAE4DB;
+  min-height: 300px;
+}
+
+button {
+  margin: 15px;
+}
+
+#currentGroup {
+  background-color: #DCAE1D;
+  max-width: 200px;
+  min-height: 100px;
+  margin: 15px;
+  display: inline-block;
+}
+
+#prevGroup {
+  background-color: #7A9D96;
+  width: 100px;
+  height: 100px;
+  margin: 15px;
+  display: inline-block;
 }
