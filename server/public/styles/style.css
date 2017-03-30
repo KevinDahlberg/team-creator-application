@@ -50,6 +50,7 @@ h3 {
 
 button {
   margin: 15px;
+  margin: 0 auto;
 }
 
 .currentGroup {
@@ -62,7 +63,7 @@ button {
 
 .prevGroup {
   background-color: #7A9D96;
-  max-width: 200px;
+  max-width: 300px;
   min-height: 100px;
   margin: 15px;
   display: inline-block;
