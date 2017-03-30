@@ -175,21 +175,25 @@ function addEventListeners() {
 
 function appendNewGroups(response) {
   console.log(response);
-  //this assumes that the new group is being passed in as an array of strings,
-  // where each string is a collection of comma-delimited names of group members.
   for (var i = 0; i < response.length; i++) {
-    $('#currentGroupDiv').append("<p>Group "+ (i+1) + " is: ", response[i], "</p>");
+    $('#currentGroupDiv').append("<div class='col-md-1 centered currentGroup' id='" + (i+1) + "'>Group "+ (i+1) + " is: <p class='currentResponse'>" + response[i] + "</p></div>");
+    // var $id = $("#" + i+1);
+    // $id.append("<p class='currentResponse'>", response[i], "</p>");
+    // <div class="col-md-1 centered" id="currentGroup">Current (test)</div>
   }
 }
 
 function appendAllGroups(response) {
   console.log(response);
   for (var j = 0; j < response.length; j++) {
-    $('#previousGroupDiv').append('<div id="'+j+'"><h1>Project Number '+ (j+1)+' created these groups:<h1></div>');
+    $('#previousGroupDiv').append('<div class="col-md-1 centered prevGroup" id="a'+j+'">Project Number '+ (j+1)+' created these groups: ');
+    // $('#currentGroupDiv').append("<div class='col-md-1 centered currentGroup' id='" + (i+1) + "'>Group "+ (i+1) + " is: <p class='currentResponse'>" + response[i] + "</p></div>");
+    // <div class="col-md-1 centered" id="prevGroup">
     console.log(response.length);
     for (var k = 0; k < response[j].length; k++) {
+      var $prev = $("#a" + j);
       console.log(response[j].length);
-      $('#previousGroupDiv').append("<p>Group "+ (k+1) + " was: ", response[j][k], "</p>");
+      $prev.append("Group "+ (k+1) + " was: ", response[j][k], "</div>");
     }//end forloop k
   }//end forloop j
 }//end appendAllGroups

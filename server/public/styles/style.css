@@ -52,7 +52,7 @@ button {
   margin: 15px;
 }
 
-#currentGroup {
+.currentGroup {
   background-color: #DCAE1D;
   max-width: 200px;
   min-height: 100px;
@@ -60,7 +60,7 @@ button {
   display: inline-block;
 }
 
-#prevGroup {
+.prevGroup {
   background-color: #7A9D96;
   max-width: 200px;
   min-height: 100px;
