@@ -34,7 +34,87 @@ function createGroups(){
 
 
   }
+// Logan's code
 
+function sendRelevantData(){
+  $('.determineGroupsButton').on('click', function(){
+    //sets value of group size equal to user determined position of dropdown
+    groupSize = $('.reasonableNumberOfGroupSizesDeterminedByAvoidingTheIsolationOfIndividualStudents').val();
+    //sets name of current project equal to sequence of letters typed into project name box
+    curProject = $('#curProject').val();
+    console.log(groupSize);
+    console.log(curProject);
+    //calls function to randomly generate groups
+    createGroups();
+    extractAllGroups();
+    //in theory appends new groups to the div
+    appendNewGroupsToDiv();
+  });
+}
+
+function extractAllGroups(){
+  for (var l = 0; l < allGroups.length; l++){
+    //sets thisGroup to represent the current group
+    var thisGroup = allGroups[l];
+    console.log(thisGroup);
+  }
+}
+
+function appendNewGroupsToDiv(){
+  //cycles through array of all groups
+  for (var j = 0; j < allGroups.length; j++){
+    //sets thisGroup to represent the current group
+    var thisGroup = allGroups[j];
+    //cycles through the current group
+    for (var k = 0; k < thisGroup.length; k++){
+      //sets thisPerson equal to the person represented by the index[k] of the current group
+      var thisPerson = thisGroup[k];
+      //nothing sticks in client side logic
+      // console.log($('.currentGroup').append('<p>' + thisPerson + '</p>'));
+      $('.currentGroup').append('<p>' + thisPerson + '</p>');
+    }
+  }
+}
+
+function createGroups(){
+  //while we haven' run out of students
+  while (studentArray.length !== 0) {
+      // cycle through the remaining students
+      for (var i = 0; i < groupSize; i++){
+        //select a random index number based on number of remaining students
+        var curRandom = Math.floor(Math.random() * studentArray.length);
+        //call function to move randomly selected student to current Group
+        moveElement(curRandom, studentArray, curGroup);
+        //don't add students that dont exist
+        if (studentArray.length === 0){
+          break;
+        }
+      }
+      //once the current group size is filled, push it to the current group of groups of groups of groups
+        allGroups.push(curGroup);
+        //reset the current group so we can add more groups
+        curGroup = [];
+      }
+  }
+
+  function determineAndDisplayReasonableGroupSizesInsideOfOurSelectorDropdown(numberOfStudentsWishedByTheUserToBeConsideredForGrouping) {
+    for(var i = 0; i < numberOfStudentsWishedByTheUserToBeConsideredForGrouping.length/2; i++){
+      $('.reasonableNumberOfGroupSizesDeterminedByAvoidingTheIsolationOfIndividualStudents').append(
+        '<option value="' + (i+1) + '">' + (i+1) + '</option>');
+    }
+  }
+
+  function extractAllGroups(){
+    for (var l = 0; l < allGroups.length; l++){
+      //sets thisGroup to represent the current group
+      var thisGroup = allGroups[l];
+      console.log(thisGroup);
+    }
+  }
+
+
+
+// end Logan
 var groupSize;
 
 $(document).ready(function() {
