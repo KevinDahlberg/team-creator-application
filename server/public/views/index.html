@@ -9,22 +9,40 @@
     <script type="text/javascript" src="scripts/client.js"></script>
     <link type = "text/css" rel="stylesheet" href="vendors/bootstrap/css/bootstrap.css">
     <link type="text/css" rel="stylesheet" href="/styles/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700|Raleway" rel="stylesheet">
   </head>
   <body>
 
     <div class="container-fluid header"><h1>The Kreator</h1></div>
 
-    <div class="container-fluid wrapper">
-    <div class="container-fluid generateDiv"><h3>Generate Form Here</h3>
-        <b>Number of groups?: </b><input type="number" name="groupSize" placeholder="number of groups" id="groupSize"></input>
-        <button id="generate">Generate Group</button>
+    <div class="row">
+        <div class="container-fluid generateDiv"><h3>Generate Teams</h3>
+            <b>Number of groups?</b>
+            <br><input type="number" name="groupSize" placeholder="enter a number" id="groupSize"></input>
+            <button id="getNewGroupListButton">Generate Group</button>
+
+        </div>
     </div>
 
-    <div class="container-fluid" id="currentGroupDiv"><h3>Current Groups Here</h3></div>
 
-    <div class="container-fluid" id="previousGroupDiv"><h3>Previous Groups Here</h3></div>
+    <div class="container-fluid" id="currentGroupDiv"><h3>Groups</h3>
+       <div class="row">
+                <div class="col-md-1 centered" id="currentGroup">Current (test)</div>
+                <div class="col-md-1 centered" id="currentGroup">Current (test)</div>
+        </div>
+    </div>
 
-  </div>
+
+    <div class="container-fluid" id="previousGroupDiv"><h3>Past Groups Append Here</h3>
+        <div class="row"><button id="showPastGroupsButton">Display Prev Group</button>
+          <div class="col-md-1 centered" id="prevGroup">Previous (test)</div>
+          <div class="col-md-1 centered" id="prevGroup">Previous (test)</div>
+          <div class="col-md-1 centered" id="prevGroup">Previous (test)</div>
+          <div class="col-md-1 centered" id="prevGroup">Previous (test)</div>
+          <div class="col-md-1 centered" id="prevGroup">Previous (test)</div>
+          <div class="col-md-1 centered" id="prevGroup">Previous (test)</div>
+        </div>
+    </div>
 
     <script type="text/javascript" src="vendors/bootstrap/js/bootstrap.js">
     </script>
